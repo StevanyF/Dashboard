@@ -26,3 +26,24 @@
     transform: translateY(-7px);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)
 }
+
+.button{
+    color:white;
+    background: #008080;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.transaction-details{
+    margin-left:10px;
+    font-size: 16px;
+    color:  #333;
+}
+
+.transaction-details.completed{
+    text-decoration:line-through;
+}

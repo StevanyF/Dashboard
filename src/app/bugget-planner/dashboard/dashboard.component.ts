@@ -15,9 +15,34 @@ export class DashboardComponent {
   lastMonthsIncome = ['January: $1000', 'February: $1500', 'March: $1200'];
   currentMonthIncome = '$2000';
 
+  lastMonthsExpense = ['January: $1000', 'February: $1500', 'March: $1200'];
+  currentMonthExpense = '$1500';
+
+  todoTransactions = [
+    {description: 'Pay electricity bill'},
+    {description: 'Submit monthly report'},
+    {description: 'Buy groceries'},
+    {description: 'Insurance company'},
+  ]
+
+  totalCurrentMonthIncome = 2000;
+  totalCurrentMonthExpense = 1500;
+ 
+
+
   constructor(public router:Router){}
   onIncome(){
-    this.router.navigate(['bugget-planner/income']);
+    this.router.navigate(['/bugget-planner/income']);
+  }
+  onExpense(){
+    this.router.navigate(["/bugget-planner/expense"])
+  }
+  onTodo(){
+    this.router.navigate(["/bugget-planner/expense"])
+  }
+
+  get currentMonthSavings(): number{
+    return this.totalCurrentMonthIncome - this.totalCurrentMonthExpense;
   }
 
 }
